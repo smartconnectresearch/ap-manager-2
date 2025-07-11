@@ -1,0 +1,2501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a £100k+ Business as an SCR Affiliate Manager | Smart Connect Research</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Transform your network into a £50-100k+ annual business. Lead a team of affiliates, earn override commissions, and build recurring income with SCR's Affiliate Manager Programme.">
+    <meta name="keywords" content="affiliate manager programme, business opportunity, recurring income, team building, market research partnerships">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Build Your £100k+ Affiliate Business with SCR">
+    <meta property="og:description" content="Lead a team, earn override commissions, build recurring income. Join SCR's exclusive Affiliate Manager Programme.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smartconnectresearch.com/affiliate-manager">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1a1f3a;
+            --secondary: #2d3561;
+            --accent: #5d5fef;
+            --accent-light: #7577f3;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border: #e5e7eb;
+            --gradient-primary: linear-gradient(135deg, #1a1f3a 0%, #2d3561 100%);
+            --gradient-accent: linear-gradient(135deg, #5d5fef 0%, #7577f3 100%);
+            --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #dc2626 100%);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-white);
+        }
+
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .preloader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .preloader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Header - Remove overflow hidden to allow CTAs to be visible */
+        .header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 120px 0 120px; /* Increased bottom padding */
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header background decorations with proper z-index */
+        .header-bg-decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .header-bg-decoration::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(93,95,239,0.3) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        .header-bg-decoration::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to top, var(--bg-white), transparent);
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .exclusive-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-gold);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-bottom: 30px;
+            animation: pulse-badge 2s ease-in-out infinite;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 6px 30px rgba(245, 158, 11, 0.5); }
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+            background: linear-gradient(to right, #fff, #7577f3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        .header-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+            color: white;
+        }
+
+        /* Content wrapper to ensure proper stacking */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            background: var(--bg-white);
+            margin-top: -50px; /* Pull content up slightly */
+        }
+
+        /* Navigation - Fixed at top of viewport */
+        .nav-wrapper {
+            background: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Very high z-index to stay on top */
+            transition: box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-wrapper.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Add padding to body to account for fixed nav */
+        body {
+            padding-top: 70px; /* Adjust based on actual nav height */
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) var(--bg-light);
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 5px;
+        }
+
+        .nav-menu::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .nav-menu::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+
+        .nav-menu::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .nav-item {
+            flex-shrink: 0;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 20px 25px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link.active {
+            color: var(--accent);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25px;
+            right: 25px;
+            height: 3px;
+            background: var(--gradient-accent);
+            animation: slideIn 0.3s ease;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) var(--bg-light);
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 5px;
+        }
+
+        .nav-menu::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .nav-menu::-webkit-scrollbar-track {
+            background: var(--bg-light);
+        }
+
+        .nav-menu::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 3px;
+        }
+
+        .nav-item {
+            flex-shrink: 0;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 20px 25px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .nav-link.active {
+            color: var(--accent);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25px;
+            right: 25px;
+            height: 3px;
+            background: var(--gradient-accent);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            position: relative;
+            z-index: 2;
+            background: var(--bg-white);
+        }
+
+        /* Section - Enhanced with proper scroll margin */
+        .section {
+            margin-bottom: 100px;
+            scroll-margin-top: 100px; /* Increased to account for sticky nav */
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .section.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s ease;
+        }
+
+        /* First section needs extra padding to account for nav */
+        #opportunity {
+            padding-top: 40px;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-accent);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: 0 10px 30px rgba(93, 95, 239, 0.3);
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Cards - Enhanced */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-accent);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(93, 95, 239, 0.2);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .card-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Metrics Box - Enhanced */
+        .metrics-box {
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 24px;
+            padding: 60px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(26, 31, 58, 0.3);
+        }
+
+        .metrics-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        /* Fix for metrics-box white color inheritance */
+        .metrics-box > * {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .metrics-box p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .metrics-box strong {
+            color: white;
+        }
+
+        .metrics-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        /* Tables - Enhanced */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 60px 0;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-white);
+            overflow: hidden;
+            min-width: 600px;
+        }
+
+        .table th {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        .table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table tr:hover {
+            background: var(--bg-light);
+        }
+
+        .table .highlight {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Alert Boxes - Enhanced */
+        .alert {
+            padding: 25px 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border-left: 5px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .alert::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+        }
+
+        .alert-success {
+            background: #d1fae5;
+            border-color: var(--success);
+            color: #065f46;
+        }
+
+        .alert-info {
+            background: #dbeafe;
+            border-color: var(--accent);
+            color: #1e40af;
+        }
+
+        .alert-warning {
+            background: #fef3c7;
+            border-color: var(--warning);
+            color: #92400e;
+        }
+
+        .alert-title {
+            font-weight: 800;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        /* Timeline - Enhanced */
+        .timeline {
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gradient-accent);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 80px;
+            padding-bottom: 60px;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .timeline-item.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 5px solid var(--bg-white);
+            box-shadow: 0 0 0 3px var(--accent);
+        }
+
+        .timeline-date {
+            font-size: 0.875rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metrics-box .timeline-date {
+            color: #818cf8;
+        }
+
+        /* CRITICAL FIX: Timeline content within metrics-box */
+        .timeline-content {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            /* Override the white color from metrics-box */
+            color: var(--text-primary) !important;
+        }
+
+        /* Ensure all text within timeline-content uses proper colors */
+        .timeline-content * {
+            color: var(--text-primary) !important;
+        }
+
+        .timeline-content:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary) !important;
+            margin-bottom: 15px;
+        }
+
+        /* Additional fixes for nested content */
+        .timeline-content p {
+            color: var(--text-secondary) !important;
+        }
+
+        .timeline-content strong {
+            color: var(--text-primary) !important;
+        }
+
+        .timeline-content ul {
+            color: var(--text-secondary) !important;
+        }
+
+        .timeline-content li {
+            color: var(--text-secondary) !important;
+        }
+
+        /* Journey Steps - Enhanced */
+        .journey {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 60px 0;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .journey-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .journey-step.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+
+        .journey-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 35px;
+            right: -20px;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient-accent);
+        }
+
+        .step-circle {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(93, 95, 239, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .journey-step:hover .step-circle {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(93, 95, 239, 0.4);
+        }
+
+        .step-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.125rem;
+        }
+
+        .step-content {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Feature List - Enhanced */
+        .feature-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .metrics-box .feature-item {
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-item:hover {
+            padding-left: 10px;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            color: var(--success);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .metrics-box .feature-icon {
+            color: #10b981;
+        }
+
+        /* Sticky CTA Bar - Premium Design */
+        .sticky-cta-bar {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(150px);
+            background: rgba(26, 31, 58, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 16px 35px;
+            border-radius: 100px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 90;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sticky-cta-bar.visible {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .sticky-cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .sticky-cta-button {
+            padding: 10px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sticky-cta-button-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .sticky-cta-button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
+            background: #f9fafb;
+        }
+
+        .sticky-cta-button-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .sticky-cta-button-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Hide on smaller screens for better UX */
+        @media (max-width: 768px) {
+            .sticky-cta-bar {
+                display: none;
+            }
+        }
+
+        /* Hero CTA with higher z-index */
+        .hero-cta {
+            text-align: center;
+            margin-top: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Header content with proper stacking */
+        .header-content {
+            position: relative;
+            z-index: 5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Ensure header stats are above background */
+        .header-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            position: relative;
+            z-index: 5;
+        }
+
+        /* Improve button contrast in header */
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: var(--gradient-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 35px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(93, 95, 239, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(93, 95, 239, 0.4);
+        }
+
+        .cta-button-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .cta-button-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Income Calculator */
+        .calculator-box {
+            background: var(--bg-light);
+            border-radius: 24px;
+            padding: 60px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .calculator-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 40px;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .calculator-inputs {
+            text-align: left;
+        }
+
+        .input-group {
+            margin-bottom: 30px;
+        }
+
+        .input-label {
+            display: block;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: var(--border);
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(93, 95, 239, 0.3);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(93, 95, 239, 0.3);
+            border: none;
+        }
+
+        .input-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 10px;
+        }
+
+        .calculator-results {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            color: var(--text-primary);
+        }
+
+        .calculator-results * {
+            color: var(--text-primary);
+        }
+
+        .result-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .result-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--gradient-success);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Video Testimonial */
+        .video-section {
+            background: var(--primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin: 100px 0;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .video-placeholder {
+            background: var(--gradient-accent);
+            padding: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .video-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer - Enhanced */
+        .footer {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-top: 150px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--bg-white), transparent);
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-gold);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 1rem;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+
+        .footer-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #7577f3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .footer-cta {
+            margin-bottom: 40px;
+        }
+
+        .footer-contact {
+            opacity: 0.8;
+            line-height: 2;
+        }
+
+        .footer-contact a {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Responsive - Enhanced */
+        @media (max-width: 768px) {
+            .header {
+                padding: 80px 0 60px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+                letter-spacing: -1px;
+            }
+            
+            .header-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .header-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .stat-card {
+                padding: 25px 15px;
+            }
+            
+            .stat-value {
+                font-size: 2rem;
+            }
+            
+            .section {
+                margin-bottom: 60px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+            
+            /* Enhanced mobile navigation */
+            .nav-wrapper {
+                padding: 0;
+                background: rgba(255, 255, 255, 0.98);
+            }
+            
+            .nav-menu {
+                padding: 0 10px 5px;
+                gap: 5px;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            
+            .nav-menu::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .nav-link {
+                padding: 15px 15px;
+                font-size: 0.875rem;
+                color: var(--text-primary);
+                font-weight: 600;
+            }
+            
+            .nav-link.active {
+                color: var(--accent);
+                background: rgba(93, 95, 239, 0.1);
+                border-radius: 8px;
+            }
+            
+            .nav-link.active::after {
+                display: none;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .card {
+                padding: 30px 25px;
+            }
+            
+            .journey {
+                gap: 30px;
+            }
+            
+            .journey-step::after {
+                display: none;
+            }
+            
+            .calculator-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .metrics-box {
+                padding: 40px 25px;
+            }
+            
+            .metrics-title {
+                font-size: 1.75rem;
+            }
+            
+            .timeline-item {
+                padding-left: 60px;
+            }
+            
+            .timeline-content {
+                padding: 20px;
+            }
+            
+            .table {
+                font-size: 0.875rem;
+            }
+            
+            .table th,
+            .table td {
+                padding: 15px 10px;
+            }
+            
+            .footer-title {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 16px 40px;
+                font-size: 1rem;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .cta-button-secondary {
+                margin-left: 0 !important;
+                margin-top: 15px;
+            }
+            
+            /* Mobile-specific improvements for James's earnings box */
+            .timeline-content > div > div {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s ease;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta-bar" id="stickyCTA">
+        <div class="sticky-cta-buttons">
+            <a href="#income-calculator" class="sticky-cta-button sticky-cta-button-primary">Calculate Income</a>
+            <a href="#apply" class="sticky-cta-button sticky-cta-button-secondary">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-bg-decoration"></div>
+        <div class="header-content">
+            <div class="exclusive-badge">
+                🚀 Limited Positions Available - Apply Today
+            </div>
+            <h1>Build Your £100k+ Affiliate Business</h1>
+            <p class="header-subtitle">
+                Lead a team of high-performing affiliates, earn override commissions, and create recurring revenue streams with Smart Connect Research
+            </p>
+            <div class="header-stats">
+                <div class="stat-card">
+                    <div class="stat-value">£110k</div>
+                    <div class="stat-label">Top Manager Income</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">10hrs</div>
+                    <div class="stat-label">Monthly Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2.5%</div>
+                    <div class="stat-label">Team Override</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">£573+</div>
+                    <div class="stat-label">Hourly Rate</div>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#income-calculator" class="cta-button">Calculate Your Potential</a>
+                <a href="#apply" class="cta-button cta-button-secondary" style="margin-left: 20px;">Apply Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-wrapper" id="nav">
+        <div class="nav">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#opportunity" class="nav-link active">The Opportunity</a></li>
+                <li class="nav-item"><a href="#earnings" class="nav-link">Earnings Model</a></li>
+                <li class="nav-item"><a href="#james-story" class="nav-link">Success Story</a></li>
+                <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li class="nav-item"><a href="#income-calculator" class="nav-link">Calculator</a></li>
+                <li class="nav-item"><a href="#who-succeeds" class="nav-link">Who Succeeds</a></li>
+                <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
+                <li class="nav-item"><a href="#apply" class="nav-link">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="content-wrapper">
+        <!-- Main Content -->
+        <main class="container">
+        <!-- The Opportunity Section -->
+        <section class="section fade-in" id="opportunity">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">1</span>
+                    The £2.5 Billion Opportunity
+                </h2>
+                <p class="section-subtitle">
+                    The UK market research industry is worth £2.5 billion and growing. Smart Connect Research has carved out a profitable niche serving Fortune 500 companies with complex, multi-market research needs. Now we're opening our doors to ambitious professionals who want to build their own six-figure business by connecting these companies with our expertise.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">The Market Reality</h3>
+                    <div class="card-content">
+                        <p>Every day, thousands of companies struggle to understand their customers, validate new products, and make data-driven decisions. They need quality research but don't know where to turn.</p>
+                        <p style="margin-top: 15px;"><strong>That's where you come in.</strong></p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3 class="card-title">Your Business Model</h3>
+                    <div class="card-content">
+                        <p><strong>Personal Income:</strong> 10% on first projects + 5% for 6 months on all your referrals</p>
+                        <p style="margin-top: 10px;"><strong>Team Override:</strong> 2.5% on all revenue generated by your affiliate team</p>
+                        <p style="margin-top: 10px;"><strong>Result:</strong> £50-100k+ annual income working 10 hours per month</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Why Now?</h3>
+                    <div class="card-content">
+                        <p>• 73% of companies increased research budgets in 2024</p>
+                        <p>• Digital transformation driving data needs</p>
+                        <p>• Post-pandemic business model changes</p>
+                        <p>• AI creating new research requirements</p>
+                        <p style="margin-top: 15px;"><strong>The timing has never been better.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-box">
+                <h3 class="metrics-title">What Makes SCR Different?</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="feature-icon">✨</span>
+                        <div>
+                            <strong style="font-size: 1.25rem;">10 Years of Excellence</strong>
+                            <p style="margin-top: 10px; opacity: 0.9;">We've built our reputation on one principle: delivering exceptional results that exceed expectations. This is why 90% of our clients return with more projects.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <div>
+                            <strong style="font-size: 1.25rem;">Fortune 500 Trust</strong>
+                            <p style="margin-top: 10px; opacity: 0.9;">Microsoft, Dell, Sanofi, and dozens more trust us with their most critical research needs. Your referrals benefit from this credibility instantly.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💰</span>
+                        <div>
+                            <strong style="font-size: 1.25rem;">Premium Pricing Power</strong>
+                            <p style="margin-top: 10px; opacity: 0.9;">Average project value: £150k. We don't compete on price - we win on value. This means bigger commissions for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-success">
+                <div class="alert-title">🏆 This Isn't Just Another Affiliate Programme</div>
+                <p>This is your opportunity to build a real business with recurring revenue, a valuable team asset, and the backing of an established market leader. While others chase quick wins, you'll build lasting wealth through strategic partnerships and team leadership.</p>
+            </div>
+        </section>
+
+        <!-- Earnings Model Section -->
+        <section class="section fade-in" id="earnings">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">2</span>
+                    Your Earnings Multiplier Model
+                </h2>
+                <p class="section-subtitle">
+                    Two revenue streams that compound over time
+                </p>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Revenue Stream</th>
+                            <th>Commission Structure</th>
+                            <th>Example Scenario</th>
+                            <th>Your Earnings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Personal Referrals</strong></td>
+                            <td>10% first project<br>+ 5% next 6 months</td>
+                            <td>£100k project + £200k follow-on</td>
+                            <td class="highlight">£20,000</td>
+                        </tr>
+                        <tr style="background: #f0f9ff;">
+                            <td><strong>Team Override</strong></td>
+                            <td>2.5% on all team revenue</td>
+                            <td>10 affiliates × £150k each</td>
+                            <td class="highlight">£37,500</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Combined Annual</strong></td>
+                            <td>Personal + Team</td>
+                            <td>Active manager scenario</td>
+                            <td class="highlight" style="color: var(--success); font-size: 1.5rem;">£82,500+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3 class="card-title">Year 1: Building</h3>
+                    <div class="card-content">
+                        <p><strong>Your Focus:</strong> Recruit 5-7 quality affiliates</p>
+                        <p><strong>Personal Revenue:</strong> £300k = £22,500</p>
+                        <p><strong>Team Revenue:</strong> £500k = £12,500</p>
+                        <p style="margin-top: 20px; font-size: 1.5rem; color: var(--success); font-weight: 700;">
+                            Total: £35,000
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Year 2: Growing</h3>
+                    <div class="card-content">
+                        <p><strong>Your Focus:</strong> Optimize team performance</p>
+                        <p><strong>Personal Revenue:</strong> £500k = £37,500</p>
+                        <p><strong>Team Revenue:</strong> £1.2M = £30,000</p>
+                        <p style="margin-top: 20px; font-size: 1.5rem; color: var(--success); font-weight: 700;">
+                            Total: £67,500
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Year 3: Scaling</h3>
+                    <div class="card-content">
+                        <p><strong>Your Focus:</strong> Maximize all channels</p>
+                        <p><strong>Personal Revenue:</strong> £800k = £60,000</p>
+                        <p><strong>Team Revenue:</strong> £2M = £50,000</p>
+                        <p style="margin-top: 20px; font-size: 1.5rem; color: var(--success); font-weight: 700;">
+                            Total: £110,000
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-box">
+                <h3 class="metrics-title">The Compound Effect</h3>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value">87%</div>
+                        <div class="metric-label">Client Retention</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">£150k</div>
+                        <div class="metric-label">Average Project</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">3.2x</div>
+                        <div class="metric-label">Client Lifetime Value</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">18mo</div>
+                        <div class="metric-label">Average Relationship</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- James Story Section -->
+        <section class="section fade-in" id="james-story">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">3</span>
+                    From Corporate Director to Six-Figure Business Owner
+                </h2>
+                <p class="section-subtitle">
+                    How James built an £82,500 annual income in 12 months
+                </p>
+            </div>
+
+            <div class="metrics-box">
+                <h3 class="metrics-title" style="text-align: center; color: white;">James's Journey: Former Ipsos Director → SCR Affiliate Manager</h3>
+                
+                <div class="timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">The Starting Point</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Leaving Corporate Life</h3>
+                            <p>"After 15 years at Ipsos, I knew everyone in the industry. But I was tired of the politics, the bureaucracy, the ceiling on my earnings. I wanted to build something of my own."</p>
+                            <p style="margin-top: 15px;"><strong>James's advantages:</strong> Deep industry knowledge, extensive network, credibility</p>
+                            <p><strong>His challenge:</strong> How to monetize relationships without starting from scratch</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">Months 1-3: Building Smart</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Strategic Team Assembly</h3>
+                            <p><strong>James's recruitment pitch was simple:</strong></p>
+                            <p style="margin: 15px 0; padding: 20px; background: #f3f4f6; border-radius: 8px;">
+                                "You already know CEOs who need research. I'll show you how to turn those relationships into £30-50k annual income with just 2-3 hours per referral. No selling, no follow-up, just introductions."
+                            </p>
+                            <p><strong>His first recruits:</strong></p>
+                            <ul style="margin-top: 15px; padding-left: 20px;">
+                                <li><strong>Marcus</strong> - Tech consultant with Microsoft/Dell contacts</li>
+                                <li><strong>Sarah</strong> - Banking RM managing 20+ pharma accounts</li>
+                                <li><strong>David</strong> - Healthcare advisor to medtech CEOs</li>
+                                <li><strong>Emma</strong> - Retail strategist with FMCG connections</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">Months 4-6: The Reality</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Light-Touch Management That Works</h3>
+                            <p><strong>What James expected:</strong> Hours of hand-holding and training</p>
+                            <p><strong>The reality:</strong></p>
+                            <ul style="margin: 15px 0; padding-left: 20px;">
+                                <li>15-minute monthly check-ins via WhatsApp</li>
+                                <li>Quick email forwards when opportunities arise</li>
+                                <li>Monthly SCR call for best practices</li>
+                                <li>Focus remained on his own deal flow</li>
+                            </ul>
+                            <p style="margin-top: 15px; padding: 20px; background: #dbeafe; border-radius: 8px; border-left: 4px solid var(--accent);">
+                                <strong>Key insight:</strong> "I spent 80% of my time on my own referrals, 20% supporting the team. The beauty is that good affiliates are self-sufficient - they just need occasional guidance."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">Months 7-12: Acceleration</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">The Numbers Start Compounding</h3>
+                            <p><strong>Q3 Results:</strong></p>
+                            <ul style="margin: 15px 0; padding-left: 20px;">
+                                <li>James personally: 4 referrals = £300k revenue</li>
+                                <li>Team combined: 12 referrals = £800k revenue</li>
+                                <li>Override kicks in on everything</li>
+                            </ul>
+                            <p><strong>Q4 Explosion:</strong></p>
+                            <ul style="margin: 15px 0; padding-left: 20px;">
+                                <li>Word spreads about SCR's quality</li>
+                                <li>Referrals become easier as trust builds</li>
+                                <li>Clients start coming back for more projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">Year 1 Final Results</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">The Bottom Line</h3>
+                            <div style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); color: #1a1f3a; padding: 50px 40px; border-radius: 20px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.1), 0 0 0 2px rgba(93,95,239,0.2); position: relative; overflow: hidden;">
+                                <div style="position: absolute; top: -50%; right: -30%; width: 150%; height: 150%; background: radial-gradient(circle, rgba(93,95,239,0.05) 0%, transparent 60%); animation: rotate 25s linear infinite;"></div>
+                                <div style="position: relative; z-index: 1;">
+                                    <p style="font-size: 1.125rem; margin-bottom: 35px; color: #64748b; text-transform: uppercase; letter-spacing: 3px; font-weight: 700;">James's Year 1 Earnings Breakdown</p>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+                                        <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 12px; font-weight: 600;">Personal Referrals (£600k)</p>
+                                            <p style="font-size: 2.75rem; font-weight: 900; background: linear-gradient(135deg, #5d5fef 0%, #7577f3 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">£45,000</p>
+                                        </div>
+                                        <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 12px; font-weight: 600;">Team Override (£1.5M)</p>
+                                            <p style="font-size: 2.75rem; font-weight: 900; background: linear-gradient(135deg, #5d5fef 0%, #7577f3 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1;">£37,500</p>
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 3px solid #e2e8f0; padding-top: 35px; margin-top: 35px;">
+                                        <p style="font-size: 0.875rem; color: #64748b; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; font-weight: 700;">Total First Year Income</p>
+                                        <p style="font-size: 4.5rem; font-weight: 900; background: linear-gradient(135deg, #10b981 0%, #059669 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; text-shadow: 0 0 80px rgba(16,185,129,0.2);">£82,500</p>
+                                    </div>
+                                    <div style="display: flex; justify-content: center; gap: 50px; margin-top: 40px;">
+                                        <div style="background: rgba(93,95,239,0.05); padding: 20px 30px; border-radius: 10px;">
+                                            <p style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Time Investment</p>
+                                            <p style="font-size: 1.5rem; color: #1a1f3a; font-weight: 800;">10-12 hrs/month</p>
+                                        </div>
+                                        <div style="background: rgba(16,185,129,0.08); padding: 20px 30px; border-radius: 10px;">
+                                            <p style="font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Hourly Rate</p>
+                                            <p style="font-size: 1.5rem; color: #1a1f3a; font-weight: 800;">£573-£687</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <div class="alert-title">James's Advice to New Managers</div>
+                <p>"Don't overthink it. The system works because SCR delivers exceptional results. Your job is simply to connect the right people. Focus on quality over quantity - both in your referrals and your team. The money follows naturally."</p>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section fade-in" id="how-it-works">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">4</span>
+                    Your Path to Manager Success
+                </h2>
+                <p class="section-subtitle">
+                    A proven system that fits around your life
+                </p>
+            </div>
+
+            <div class="journey">
+                <div class="journey-step fade-in">
+                    <div class="step-circle">1</div>
+                    <h4 class="step-title">Apply & Qualify</h4>
+                    <p class="step-content">Share your background and vision. We'll assess fit within 48 hours.</p>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="step-circle">2</div>
+                    <h4 class="step-title">Onboard & Train</h4>
+                    <p class="step-content">2-hour intensive training plus ongoing support. You'll be ready in days.</p>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="step-circle">3</div>
+                    <h4 class="step-title">Build Your Team</h4>
+                    <p class="step-content">Recruit 5-10 quality affiliates from your network. We help you pitch.</p>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="step-circle">4</div>
+                    <h4 class="step-title">Generate Revenue</h4>
+                    <p class="step-content">Focus on your own referrals while your team builds momentum.</p>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="step-circle">5</div>
+                    <h4 class="step-title">Scale & Optimize</h4>
+                    <p class="step-content">Refine your system, maximize earnings, build your business.</p>
+                </div>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <h3 class="card-title">Your Monthly Commitment</h3>
+                    <div class="card-content">
+                        <p><strong>Week 1-2 (5 hours):</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Quick team check-ins (15 min each)</li>
+                            <li>Review opportunities pipeline</li>
+                            <li>Pursue 1-2 personal referrals</li>
+                        </ul>
+                        
+                        <p style="margin-top: 20px;"><strong>Week 3-4 (5-7 hours):</strong></p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Monthly SCR strategy call (1 hour)</li>
+                            <li>Team performance review</li>
+                            <li>1-2 recruitment conversations</li>
+                            <li>Personal business development</li>
+                        </ul>
+                        
+                        <p style="margin-top: 20px; padding: 15px; background: #f3f4f6; border-radius: 8px;">
+                            <strong>Total: 10-12 hours per month for £50-100k+ annual income</strong>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🚫</div>
+                    <h3 class="card-title">What You DON'T Do</h3>
+                    <div class="card-content">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">❌</span>
+                                <span>No client management after introduction</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">❌</span>
+                                <span>No project delivery or quality control</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">❌</span>
+                                <span>No invoicing or payment chasing</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">❌</span>
+                                <span>No technical knowledge required</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">❌</span>
+                                <span>No hard selling or cold calling</span>
+                            </li>
+                        </ul>
+                        
+                        <p style="margin-top: 20px; font-weight: 700; color: var(--accent);">
+                            You focus on relationships. SCR handles everything else.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Income Calculator -->
+        <section class="section fade-in" id="income-calculator">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">5</span>
+                    Calculate Your Manager Potential
+                </h2>
+            </div>
+
+            <div class="calculator-box">
+                <h3 class="calculator-title">See Your Personalized Earnings Projection</h3>
+                
+                <div class="calculator-grid">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label class="input-label">Your Personal Referrals (Annual)</label>
+                            <input type="range" class="slider" id="personal-referrals" min="2" max="20" value="8">
+                            <div class="input-value" id="personal-value">8 referrals</div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label class="input-label">Average Project Value</label>
+                            <input type="range" class="slider" id="project-value" min="50000" max="250000" step="10000" value="100000">
+                            <div class="input-value" id="project-display">£100,000</div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label class="input-label">Team Size</label>
+                            <input type="range" class="slider" id="team-size" min="3" max="10" value="7">
+                            <div class="input-value" id="team-display">7 affiliates</div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label class="input-label">Team Performance (Referrals per Affiliate)</label>
+                            <input type="range" class="slider" id="team-performance" min="1" max="5" value="3">
+                            <div class="input-value" id="performance-display">3 per year</div>
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <div class="result-label">Your Total Annual Income</div>
+                        <div class="result-value" id="total-income">£67,500</div>
+                        
+                        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
+                            <p style="margin-bottom: 10px;"><strong>Personal Commissions:</strong> <span id="personal-income">£30,000</span></p>
+                            <p style="margin-bottom: 10px;"><strong>Team Override:</strong> <span id="team-income">£37,500</span></p>
+                            <p style="margin-bottom: 10px;"><strong>Monthly Income:</strong> <span id="monthly-income">£5,625</span></p>
+                            <p><strong>Hourly Rate:</strong> <span id="hourly-rate">£469</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who Succeeds Section -->
+        <section class="section fade-in" id="who-succeeds">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">6</span>
+                    Who Becomes a Successful Manager?
+                </h2>
+                <p class="section-subtitle">
+                    The common traits of our six-figure earners
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🌟</div>
+                    <h3 class="card-title">Industry Veterans</h3>
+                    <div class="card-content">
+                        <p><strong>Background:</strong> 10+ years in market research, consulting, or B2B sales</p>
+                        <p><strong>Advantage:</strong> Deep networks and instant credibility</p>
+                        <p><strong>Success rate:</strong> 89% reach £50k+ in Year 1</p>
+                        <p style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px;">
+                            <strong>Example:</strong> Former research directors who know every CMO in their sector
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Connected Consultants</h3>
+                    <div class="card-content">
+                        <p><strong>Background:</strong> Strategy, management, or industry consulting</p>
+                        <p><strong>Advantage:</strong> Already trusted advisors to C-suite</p>
+                        <p><strong>Success rate:</strong> 85% reach £50k+ in Year 1</p>
+                        <p style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px;">
+                            <strong>Example:</strong> Independent consultants who want recurring income
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3 class="card-title">Natural Leaders</h3>
+                    <div class="card-content">
+                        <p><strong>Background:</strong> Any industry with team leadership experience</p>
+                        <p><strong>Advantage:</strong> Know how to motivate and guide others</p>
+                        <p><strong>Success rate:</strong> 82% reach £50k+ in Year 1</p>
+                        <p style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px;">
+                            <strong>Example:</strong> Sales directors building a portfolio career
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-box">
+                <h3 class="metrics-title">The Perfect Manager Profile</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <div>
+                            <strong>Strong Professional Network</strong>
+                            <p style="margin-top: 5px;">You know decision-makers across multiple companies and industries</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <div>
+                            <strong>Business Development Mindset</strong>
+                            <p style="margin-top: 5px;">You see opportunities everywhere and know how to connect people</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <div>
+                            <strong>Leadership Experience</strong>
+                            <p style="margin-top: 5px;">You've managed teams, projects, or partnerships successfully</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <div>
+                            <strong>Entrepreneurial Spirit</strong>
+                            <p style="margin-top: 5px;">You want to build something of your own with unlimited upside</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <div>
+                            <strong>10+ Hours Monthly</strong>
+                            <p style="margin-top: 5px;">You can commit this time to build a six-figure income stream</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="section fade-in" id="support">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">7</span>
+                    World-Class Manager Support
+                </h2>
+                <p class="section-subtitle">
+                    Everything you need to succeed from Day 1
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Manager Fast-Track Onboarding</h3>
+                    <div class="card-content">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">📋</span>
+                                <span>2-hour intensive manager training with leadership team</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">🎯</span>
+                                <span>Team recruitment templates and scripts that convert</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">💼</span>
+                                <span>30-60-90 day success roadmap</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">🏆</span>
+                                <span>Direct mentorship from top-performing managers</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">💎</div>
+                    <h3 class="card-title">Exclusive Manager Tools</h3>
+                    <div class="card-content">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">💻</span>
+                                <span>Full CRM access to track team performance</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">📧</span>
+                                <span>SCR email address for instant credibility</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">📊</span>
+                                <span>Real-time dashboards and earnings reports</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">🎓</span>
+                                <span>Advanced training portal with weekly updates</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3 class="card-title">Ongoing Success Programme</h3>
+                    <div class="card-content">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">📞</span>
+                                <span>Monthly Manager Success Calls with SCR leadership</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">⚡</span>
+                                <span>Priority proposal support for high-value deals</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">🌟</span>
+                                <span>Annual planning sessions to maximize growth</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">🏅</span>
+                                <span>Manager recognition programme with bonuses</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info">
+                <div class="alert-title">💬 What Our Managers Say About Support</div>
+                <p>"The support is phenomenal. I never feel alone. Whether it's help closing a big deal or advice on team management, SCR is always there. This isn't just an affiliate programme - it's a true partnership." - Sarah M., Manager earning £75k annually</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section fade-in" id="faq">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">8</span>
+                    Manager Programme FAQ
+                </h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3 class="card-title">How is this different from being an affiliate?</h3>
+                    <div class="card-content">
+                        <p>As a manager, you earn on two levels: your personal referrals (10% + 5%) AND a 2.5% override on all team revenue. Plus, you get enhanced support, tools, and direct access to SCR leadership. Affiliates typically earn £20-50k; managers earn £50-100k+.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">What if I've never managed a team before?</h3>
+                    <div class="card-content">
+                        <p>Many successful managers had no prior team management experience. What matters is your network, business acumen, and willingness to guide others. We provide all the training, templates, and ongoing support you need to succeed.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">How quickly can I start earning?</h3>
+                    <div class="card-content">
+                        <p>Most managers close their first personal referral within 30 days and have their first team member productive within 60 days. Commissions are paid within 30 days of client payment. Many managers see their first £5,000+ commission within 90 days.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">What investment is required?</h3>
+                    <div class="card-content">
+                        <p>Zero financial investment. No joining fees, monthly charges, or hidden costs. Your only investment is 10+ hours per month of your time. We provide all training, tools, and support at no cost. You earn from Day 1.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Can I do this alongside my current role?</h3>
+                    <div class="card-content">
+                        <p>Yes! Most managers start part-time while maintaining their primary income. The 10-hour monthly commitment is designed to fit around a busy schedule. Many transition to full-time once their SCR income exceeds their salary.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">What makes SCR different from other programmes?</h3>
+                    <div class="card-content">
+                        <p>Three things: 1) Our 90% client retention means recurring commissions, 2) Average project values of £150k mean bigger commissions, 3) We handle everything after introduction - you never have to sell, deliver, or manage clients. This is passive income at its best.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply Section -->
+        <section class="section fade-in" id="apply">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">9</span>
+                    Your Next Steps
+                </h2>
+                <p class="section-subtitle">
+                    Join an elite group building six-figure businesses
+                </p>
+            </div>
+
+            <div class="journey">
+                <div class="journey-step fade-in">
+                    <div class="step-circle">📧</div>
+                    <h4 class="step-title">Submit Application</h4>
+                    <p class="step-content">5-minute form about your background and goals</p>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="step-circle">📞</div>
+                    <h4 class="step-title">Discovery Call</h4>
+                    <p class="step-content">30-minute conversation to explore mutual fit</p>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="step-circle">✅</div>
+                    <h4 class="step-title">Decision</h4>
+                    <p class="step-content">We'll confirm within 48 hours if you're accepted</p>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="step-circle">🚀</div>
+                    <h4 class="step-title">Launch</h4>
+                    <p class="step-content">Complete onboarding and start building your business</p>
+                </div>
+            </div>
+
+            <div class="metrics-box" style="text-align: center;">
+                <h3 class="metrics-title">What We Look For</h3>
+                
+                <div class="card-grid" style="margin-top: 40px;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; text-align: left;">
+                        <h4 style="color: white; margin-bottom: 20px;">Essential Criteria</h4>
+                        <ul style="list-style: none;">
+                            <li style="margin-bottom: 15px; color: white;">✅ 5+ years in business, consulting, or sales</li>
+                            <li style="margin-bottom: 15px; color: white;">✅ Proven network of senior decision-makers</li>
+                            <li style="margin-bottom: 15px; color: white;">✅ Track record of building relationships</li>
+                            <li style="margin-bottom: 15px; color: white;">✅ 10+ hours monthly availability</li>
+                            <li style="color: white;">✅ Entrepreneurial mindset</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; text-align: left;">
+                        <h4 style="color: white; margin-bottom: 20px;">Ideal Additions</h4>
+                        <ul style="list-style: none;">
+                            <li style="margin-bottom: 15px; color: white;">⭐ Market research industry experience</li>
+                            <li style="margin-bottom: 15px; color: white;">⭐ Existing team leadership experience</li>
+                            <li style="margin-bottom: 15px; color: white;">⭐ Established personal brand</li>
+                            <li style="margin-bottom: 15px; color: white;">⭐ Multiple sector connections</li>
+                            <li style="color: white;">⭐ Previous business ownership</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="alert alert-warning" style="margin-top: 40px; background: rgba(245, 158, 11, 0.1); border-color: var(--warning); color: white;">
+                    <div class="alert-title" style="color: white;">⏰ Limited Manager Positions Available</div>
+                    <p style="color: white;">We maintain a small, elite group of managers to ensure quality support and market coverage. Only 3-5 new manager positions open quarterly. Current availability: 2 positions remaining for 2025.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-badge">
+                🔥 Only 2 Manager Positions Remaining for 2025
+            </div>
+            <h2 class="footer-title">Ready to Build Your £100k+ Business?</h2>
+            <p class="footer-subtitle">
+                Join an exclusive group of professionals building significant wealth through strategic partnerships
+            </p>
+            <div class="footer-cta">
+                <a href="mailto:partnerships@smartconnectresearch.com?subject=Affiliate Manager Application&body=Hi,%0D%0A%0D%0AI'm interested in the Affiliate Manager position.%0D%0A%0D%0AAbout me:%0D%0A- Current role:%0D%0A- Years of experience:%0D%0A- Industry networks:%0D%0A- Why I'd excel as a manager:%0D%0A- Time availability:%0D%0A%0D%0AThanks!" class="cta-button">
+                    Apply for Manager Position
+                </a>
+            </div>
+            <div class="footer-contact">
+                <p>Email: <a href="mailto:partnerships@smartconnectresearch.com">partnerships@smartconnectresearch.com</a></p>
+                <p>Include: Your background, network strength, and leadership experience</p>
+                <p style="margin-top: 20px; font-size: 0.875rem; opacity: 0.7;">
+                    Smart Connect Research Ltd | Established 2016 | Trusted by Fortune 500
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Remove preloader
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('fade-out');
+            }, 500);
+        });
+
+        // Navigation scroll effect - simplified without size changes
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('nav');
+            const stickyCTA = document.getElementById('stickyCTA');
+            const scrollY = window.scrollY;
+            
+            // Navigation enhancement - only visual changes, no size changes
+            if (scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            
+            // Show sticky CTA after scrolling past header
+            if (scrollY > 800) {
+                stickyCTA.classList.add('visible');
+            } else {
+                stickyCTA.classList.remove('visible');
+            }
+        });
+
+        /* Active nav link tracking with offset */
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navHeight = document.getElementById('nav').offsetHeight;
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navHeight - 50;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for all anchor links including sticky CTA
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                if (target) {
+                    // Get the navigation height
+                    const navHeight = document.getElementById('nav').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                    
+                    // Hide sticky CTA temporarily when clicking its buttons
+                    const stickyCTA = document.getElementById('stickyCTA');
+                    if (this.closest('.sticky-cta-bar')) {
+                        stickyCTA.classList.remove('visible');
+                        setTimeout(() => {
+                            if (window.scrollY > 800) {
+                                stickyCTA.classList.add('visible');
+                            }
+                        }, 1000);
+                    }
+                    
+                    // Smooth scroll to adjusted position
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in', 'visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.section, .timeline-item, .journey-step, .fade-in, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Income Calculator
+        function formatCurrency(amount) {
+            return '£' + Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+        function updateCalculator() {
+            const personalReferrals = parseInt(document.getElementById('personal-referrals').value);
+            const projectValue = parseInt(document.getElementById('project-value').value);
+            const teamSize = parseInt(document.getElementById('team-size').value);
+            const teamPerformance = parseInt(document.getElementById('team-performance').value);
+            
+            // Update display values
+            document.getElementById('personal-value').textContent = personalReferrals + ' referrals';
+            document.getElementById('project-display').textContent = formatCurrency(projectValue);
+            document.getElementById('team-display').textContent = teamSize + ' affiliates';
+            document.getElementById('performance-display').textContent = teamPerformance + ' per year';
+            
+            // Calculate personal income (10% first + 5% follow-on estimated at 50% additional revenue)
+            const personalRevenue = personalReferrals * projectValue;
+            const personalFirstProject = personalRevenue * 0.10;
+            const personalFollowOn = (personalRevenue * 0.5) * 0.05; // Assume 50% follow-on revenue
+            const personalIncome = personalFirstProject + personalFollowOn;
+            
+            // Calculate team income (2.5% override)
+            const teamRevenue = teamSize * teamPerformance * projectValue;
+            const teamIncome = teamRevenue * 0.025;
+            
+            // Calculate totals
+            const totalIncome = personalIncome + teamIncome;
+            const monthlyIncome = totalIncome / 12;
+            const hourlyRate = totalIncome / (12 * 10); // Assuming 10 hours per month
+            
+            // Update display
+            document.getElementById('personal-income').textContent = formatCurrency(personalIncome);
+            document.getElementById('team-income').textContent = formatCurrency(teamIncome);
+            document.getElementById('total-income').textContent = formatCurrency(totalIncome);
+            document.getElementById('monthly-income').textContent = formatCurrency(monthlyIncome);
+            document.getElementById('hourly-rate').textContent = formatCurrency(hourlyRate);
+        }
+
+        // Add event listeners to sliders
+        document.getElementById('personal-referrals').addEventListener('input', updateCalculator);
+        document.getElementById('project-value').addEventListener('input', updateCalculator);
+        document.getElementById('team-size').addEventListener('input', updateCalculator);
+        document.getElementById('team-performance').addEventListener('input', updateCalculator);
+
+        // Initialize calculator
+        updateCalculator();
+
+        // Add parallax effect to header
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('.header');
+            header.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
